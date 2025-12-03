@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id 'dev.flutter.flutter-gradle-plugin'
+    id 'com.google.gms.google-services' // Firebase plugin
+}
+
+android {
+    namespace = "com.example.nextgen"
+    compileSdk = flutter.compileSdkVersion
+
+
+    defaultConfig {
+        applicationId = "com.example.nextgen"
+        minSdkVersion flutter.minSdkVersion                   // ← bump this to 23
+        targetSdkVersion flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your signing config if you have one
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    // Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:33.13.0')
+
+    // Firebase Analytics (example)
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Firebase Auth
+    implementation 'com.google.firebase:firebase-auth'
+
+    // You can add more Firebase dependencies here, e.g.:
+    // implementation 'com.google.firebase:firebase-firestore'
+}

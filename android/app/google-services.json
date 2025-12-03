@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880759126705",
+    "project_id": "mobile-pos-b4534",
+    "storage_bucket": "mobile-pos-b4534.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880759126705:android:6e9a64e8ad91050f138090",
+        "android_client_info": {
+          "package_name": "com.example.nextgen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQ2XIyrk_8XwpSSDEPlmxkqKMj1GusRgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
