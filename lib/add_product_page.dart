@@ -174,12 +174,7 @@ class _AddProductPageState extends State<AddProductPage> {
 
               const SizedBox(height: 10),
 
-              // TextFormField(
-              //   controller: codeController,
-              //   decoration: const InputDecoration(labelText: "Product Code (Unique)"),
-              //   validator: (value) => value!.isEmpty ? "Enter product code" : null,
-              // ),
-              //data enter
+
               TextFormField(
                 controller: codeController,
                 decoration: InputDecoration(
@@ -200,7 +195,6 @@ class _AddProductPageState extends State<AddProductPage> {
                 ),
                 validator: (value) => value!.isEmpty ? "Enter product code" : null,
               ),
-              // data delele
               const SizedBox(height: 20),
 
               ElevatedButton(
