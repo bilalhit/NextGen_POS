@@ -24,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
       passwordController.text.trim(),
     );
 
-    if (user != null) {
+    if (user != null && 'admin@gmail.com'!=emailController.text.trim()) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const HomeScreen()),

@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.nextgen"
-        minSdkVersion flutter.minSdkVersion                   // ← bump this to 23
+        minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName

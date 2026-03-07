@@ -111,6 +111,7 @@ class _QRScannerScreenState extends State<QRScannerScreen> {
         return;
       }
 
+
       final productDoc = productsQuery.docs.first;
       final productRef = productDoc.reference;
       final product = productDoc.data();

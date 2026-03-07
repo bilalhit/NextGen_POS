@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uuid/uuid.dart';
 import 'QRDisplayPage.dart';
+import 'scan_page.dart';
 
 class AddProductPage extends StatefulWidget {
   const AddProductPage({super.key});
@@ -173,12 +174,33 @@ class _AddProductPageState extends State<AddProductPage> {
 
               const SizedBox(height: 10),
 
+              // TextFormField(
+              //   controller: codeController,
+              //   decoration: const InputDecoration(labelText: "Product Code (Unique)"),
+              //   validator: (value) => value!.isEmpty ? "Enter product code" : null,
+              // ),
+              //data enter
               TextFormField(
                 controller: codeController,
-                decoration: const InputDecoration(labelText: "Product Code (Unique)"),
+                decoration: InputDecoration(
+                  labelText: "Product Code (Unique)",
+                  suffixIcon: IconButton(
+                    icon: Icon(Icons.qr_code_scanner),
+                    onPressed: () async {
+                      final result = await Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ScanPage()),
+                      );
+
+                      if (result != null) {
+                        codeController.text = result;
+                      }
+                    },
+                  ),
+                ),
                 validator: (value) => value!.isEmpty ? "Enter product code" : null,
               ),
-
+              // data delele
               const SizedBox(height: 20),
 
               ElevatedButton(
